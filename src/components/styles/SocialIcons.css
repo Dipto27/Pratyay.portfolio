@@ -41,7 +41,7 @@
   display: flex;
   font-size: 23px;
   will-change: left, top;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.2s ease-out;
 }
 .resume-button {
   position: absolute;
@@ -58,9 +58,10 @@
   font-weight: 600;
   color: #5e5e5e;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s ease-out;
   transform-origin: left bottom;
   transform: translateX(100%) rotateZ(-90deg);
+  will-change: color, transform;
 }
 .resume-button:hover {
   color: #fff;

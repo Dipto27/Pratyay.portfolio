@@ -1,36 +1,31 @@
 import { useState, useCallback } from "react";
 import "./styles/Work.css";
-import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
+    title: "University Management System",
+    category: "Online Exam Portal",
+    tools: "Django, MySQL, Python, HTML, CSS",
+    image: "/images/placeholder.webp",
+    link: "#",
+    description: "Developed a full-stack web quiz platform using HTML, CSS, JavaScript, Bootstrap and Django improving response time. Enhanced data management efficiency by 40% using MySQL database integration."
   },
   {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
+    title: "Fully Responsive Portfolio",
+    category: "Personal Portfolio Website",
+    tools: "JavaScript, HTML5, CSS3, Bootstrap",
+    image: "/images/placeholder.webp",
+    link: "#",
+    description: "Built a personal portfolio website to showcase academic qualifications and projects. Strengthened JavaScript skills by implementing interactive elements and dynamic content rendering. Ensured responsive design for seamless access across different platforms."
   },
   {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
-  },
-  {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "Sentinel Overview Dashboard",
+    category: "Internal Production Dashboard",
+    tools: "React, TypeScript, HTML, CSS, JavaScript, Springboot, LLM, API, ITSM Integration, Alert Management",
+    image: "/images/placeholder.webp",
+    link: "#",
+    description: "Developed Sentinel Overview, an internal production-ready dashboard for centralized alert visibility, monitoring, and resolution. Built an interface enabling users to view, analyze, and edit internal alerts. Integrated with ITSM data sources for efficient data processing. Designed frontend-backend data flow ensuring accurate rendering and seamless display. Improved operational efficiency by consolidating alert lifecycle details and monitoring insights into a unified dashboard."
   },
 ];
 
@@ -110,14 +105,12 @@ const Work = () => {
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        {project.description && (
+                          <div className="carousel-description">
+                            <p>{project.description}</p>
+                          </div>
+                        )}
                       </div>
-                    </div>
-                    <div className="carousel-image-wrapper">
-                      <WorkImage
-                        image={project.image}
-                        alt={project.title}
-                        link={project.link}
-                      />
                     </div>
                   </div>
                 </div>

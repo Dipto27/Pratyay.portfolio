@@ -49,7 +49,7 @@
 
 .carousel-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 60px;
   width: 100%;
 }
@@ -59,6 +59,7 @@
   display: flex;
   gap: 30px;
   align-items: flex-start;
+  max-width: 800px;
 }
 
 .carousel-number h3 {
@@ -107,11 +108,18 @@
   font-size: 15px;
 }
 
-.carousel-image-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.carousel-description {
+  margin-top: 16px;
+  max-height: none;
+}
+
+.carousel-description p {
+  font-weight: 200;
+  color: #b0b0b0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 100%;
 }
 
 /* ── Navigation Arrows ── */
@@ -131,8 +139,9 @@
   justify-content: center;
   font-size: 22px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   backdrop-filter: blur(8px);
+  will-change: background, border-color, box-shadow;
 }
 
 .carousel-arrow:hover {
@@ -165,8 +174,9 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   padding: 0;
+  will-change: background, border-color;
 }
 
 .carousel-dot:hover {
@@ -277,10 +287,6 @@
   }
 
   .carousel-info {
-    width: 100%;
-  }
-
-  .carousel-image-wrapper {
     width: 100%;
   }
 
